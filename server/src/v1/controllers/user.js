@@ -74,61 +74,24 @@ exports.scan= async (req,res)=>{
     }
 };
 
-// exports.login=async(req,res)=>{
-//     const {email,idm}=req.body;
-
-//     try{
-//         const user=await User.findOne({email,idm});
-//         if(!user){
-//             return res.status(401).json({
-//                 errors:[
-//                     {
-//                         param:"email",
-//                         msg:"メールアドレスが無効です",
-//                     },
-//                     {
-//                         param:"idm",
-//                         msg:"キー情報が無効です",
-//                     },
-//                 ],    
-//                 });
-//         }
-//         const token=JWT.sign(
-//             {id:user._id},
-//             process.env.TOKEN_SECRET_KEY,
-//             {expiresIn:"24h"}
-//         );
-//         res.status(200).json({message:"ログイン成功",token,user});
-//     }catch(err){
-//         res.status(500).json({error:"サーバーエラーが発生しました"});
-//     }
-// };
-
 exports.login=async(req,res)=>{
     const {email,idm}=req.body;
+
     try{
-        const userbyemail=await User.findOne({email});
-        if(!userbyemail){
-            return res.status(401).json({
-                errors:[
-                    {
-                        param:"email",
-                        msg:"メールアドレスが無効です",
-                    }
-                    
-                ],
-            });
-        }
         const user=await User.findOne({email,idm});
         if(!user){
             return res.status(401).json({
                 errors:[
                     {
+                        param:"email",
+                        msg:"メールアドレスが無効です",
+                    },
+                    {
                         param:"idm",
                         msg:"キー情報が無効です",
-                    }
-                ],
-            });
+                    },
+                ],    
+                });
         }
         const token=JWT.sign(
             {id:user._id},

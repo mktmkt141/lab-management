@@ -70,6 +70,18 @@ router.post("/register",
       return res.status(200).json({user:req.user});
     });
 
+    //ユーザー一覧を取得するためのエンドポイント
+    router.get("/users",async(req,res)=>{
+      try{
+        const users=await User.find();//mongodbからユーザーの取得
+        console.log("取得したユーザー:",users);
+        res.json(users);
+      }catch(error){
+        console.error("ユーザー取得エラー",error);
+        res.status(500).json({message:"サーバーエラー"});
+      }
+    });
+
 
 
 module.exports=router;

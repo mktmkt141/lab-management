@@ -11,6 +11,8 @@ import Admin from './pages/Admin';
 import { createTheme,ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from '@mui/material';
 import { blue } from '@mui/material/colors';
+import AppLayout from './components/layout/AppLayout.jsx';
+import Home from './pages/Home.jsx';
 function App() {
 
   const theme=createTheme({
@@ -29,8 +31,10 @@ function App() {
           <Route path="logs" element={<Logs/>}/>
           <Route path="admin" element={<Admin/>}/>
 
-
-
+          </Route>
+          <Route path="/" element={<AppLayout/>}>
+            <Route index element={<Home/>}/>
+            <Route path="dashboard" element={<Dashboard/>}/>
           </Route>
 
         </Routes>
