@@ -11,7 +11,8 @@ const Sidebar = () => {
         navigate("/login");
     };
   return (
-    <Drawer 
+    <Drawer
+        anchor="right"
         container={window.document.body}
         variant="permanent"
         open={true}
@@ -21,13 +22,18 @@ const Sidebar = () => {
             {/* <ListItemButton> */}
                 <Box sx={{ width: "100%", textAlign: "center", mt: 2 }}>
                     <Typography variant="body2" fontWeight="700">
-                        研究室にいるメンバーのリスト
+                      緑・・いる人
+                    </Typography>
+                    <Typography variant="body2" fontWeight="700" mt={1}>
+                        赤・・いない人
+                    </Typography>
+
                     
-                    <IconButton sx={{ width: "100%", textAlign: "center", mt: 3 }} onClick={logout} >
+                    <IconButton sx={{ width: "100%", textAlign: "center", mt: 10 }} onClick={logout} >
                         ログアウト
                         <LogoutOutlinedIcon/>
                     </IconButton>
-                    </Typography>
+                    {/* </Typography> */}
                 </Box>
             {/* </ListItemButton> */}
         </List>
