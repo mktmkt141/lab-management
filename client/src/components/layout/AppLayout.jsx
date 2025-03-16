@@ -5,9 +5,12 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import authUtils from '../../utils/authUtils';
 import authApi from '../../api/authApi';
 import Sidebar from '../common/Sidebar';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../redux/features/userSlice';
 
 const AppLayout = () => {
   const navigate=useNavigate();
+  const dispatch=useDispatch();
   useEffect(()=>{
     //JWTを持っているのかを確認する
     const checkAuth=async()=>{
@@ -15,6 +18,10 @@ const AppLayout = () => {
       const user=await authUtils.isAuthenticated();
       if(!user){
         navigate("/login");
+      }else{
+        //ユーザーの保存
+        dispatch(setUser(user));
+
       }
 
     };
@@ -36,56 +43,14 @@ const AppLayout = () => {
   return (
 
     <Box sx={{ display: "flex", height: "100vh" }}>
-      {/* メインコンテンツ（左側） */}
-      <Box sx={{ flex: 1,m:2 }}>
-        <h3>研究室  出席管理</h3>
-        <Container maxWidth="sm">
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 2,
-              mt: 2,
-              width: "100%",
-            }}
-          >
-            {labMembers.map((member) => (
-              <Box
-                key={member._id}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 3,
-                  p: 1,
-                  width: "100%",
-                }}
-              >
-                <Typography sx={{ fontSize: "1.2rem", textAlign: "left" }}>
-                  {member.username}
-                </Typography>
-                <Badge
-                  sx={{
-                    "& .MuiBadge-badge": {
-                      backgroundColor:
-                        member.status === "inside" ? "#4CAF50" : "#f44336",
-                      animation: "blink 1.5s infinite",
-                      "@keyframes blink": {
-                        "0%": { opacity: 1 },
-                        "50%": { opacity: 0.3 },
-                        "100%": { opacity: 1 },
-                      },
-                    },
-                  }}
-                  variant="dot"
-                />
-              </Box>
-            ))}
-          </Box>
-        </Container>
-      </Box>
-
       {/* サイドバー（右側） */}
       <Sidebar />
+      <Box sx={{flexGrow:1,p:1,wodth:"max-content"}}>
+        <Outlet/>
+      </Box>
+      
+
+      
     </Box>
 
 

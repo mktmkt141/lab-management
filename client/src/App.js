@@ -26,15 +26,14 @@ function App() {
           <Route path="/" element={<AuthLayout />}>
           <Route path="login" element={<Login/>}/>
           <Route path="register" element={<Register/>}/>
-          <Route path="dashboard" element={<Dashboard/>}/>
-          <Route path="entry" element={<Entry/>}/>
-          <Route path="logs" element={<Logs/>}/>
           <Route path="admin" element={<Admin/>}/>
+          //auth関係のルーティング設定
 
           </Route>
-          <Route path="/" element={<AppLayout/>}>
+          <Route path="/" element={<AppLayout/>}>   
+            <Route path="logs" element={<Logs/>}/>
             <Route index element={<Home/>}/>
-            <Route path="dashboard" element={<Dashboard/>}/>
+           
           </Route>
 
         </Routes>
