@@ -108,7 +108,7 @@ const Register = () => {
       <TextField fullWidth id="slack_id" label="Slack_ID" margin='normal'name='slack_id' required helperText={slackidErrText} error={slackidErrText!==""}/>
       <TextField fullWidth id="idm" label="icカードの番号" margin='normal'name='idm' required helperText={idmErrText} error={idmErrText!==""}/>
       <TextField fullWidth id="role" label="userかadmin" margin='normal'name='role' required helperText={roleErrText} error={roleErrText!==""}/>
-      <LoadingButton sx={{mt: 3, mb: 2}} fullWidth type="submit" loading={loading} color='primary'variant="outlined">アカウント作成</LoadingButton>
+      <LoadingButton sx={{mt: 3, mb: 2,backgroundColor:"purple",color:"white","&:hover":{backgroundColor:"darkviolet"}}} fullWidth type="submit" loading={loading} color='primary'variant="outlined">アカウント作成</LoadingButton>
     </Box>
     <Button component={Link} to="/login">登録してる場合はこちら</Button>
     </>
