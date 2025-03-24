@@ -2,7 +2,7 @@ import React from 'react'
 
 const Logs = () => {
   return (
-    <div>Logs</div>
+    <div>過去の出席情報をここに記入します</div>
   )
 };
 
