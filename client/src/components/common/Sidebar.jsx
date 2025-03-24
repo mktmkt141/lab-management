@@ -2,6 +2,7 @@ import { Box, Drawer, Icon, IconButton, List, ListItemButton, Typography } from 
 import React from 'react';
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import HistoryIcon from "@mui/icons-material/History";
+import GroupsIcon from '@mui/icons-material/Groups';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
@@ -15,6 +16,9 @@ const Sidebar = () => {
     };
     const prevlog=()=>{
         navigate("/logs");
+    };
+    const home=()=>{
+        navigate("/");
     };
   return (
     <Drawer
@@ -44,10 +48,22 @@ const Sidebar = () => {
                         <HistoryIcon/>
                         
                     </IconButton>
-                        
                 </Box>
             </ListItemButton>
             <Box sx={{paddingTop:"10px"}}></Box>
+            <ListItemButton>
+                <Box sx={{width:"100%",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+                    <Typography variant="body2" frontWeight="700">
+                        出席状況
+                    </Typography>
+                    <IconButton onClick={home}>
+                        <GroupsIcon/>
+                        
+                    </IconButton>
+                </Box>
+            </ListItemButton>
+            <Box sx={{paddingTop:"10px"}}></Box>
+
         </List>
         
 
