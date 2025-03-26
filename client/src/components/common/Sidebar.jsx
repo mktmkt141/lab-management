@@ -42,7 +42,7 @@ const Sidebar = () => {
             <ListItemButton>
                 <Box sx={{width:"100%",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
                     <Typography variant="body2" frontWeight="700">
-                        過去のログ
+                        過去の出席
                     </Typography>
                     <IconButton onClick={prevlog}>
                         <HistoryIcon/>
