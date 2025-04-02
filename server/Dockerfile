@@ -17,5 +17,5 @@ COPY . .
 EXPOSE 5000
 
 # アプリケーションを起動
-CMD ["npm", "start"]
+CMD ["node", "index.js"]
 
