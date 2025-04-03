@@ -53,16 +53,33 @@ const Home = () => {
     // previous:member.idm,
   }));//学生の情報を格納するための配列//学生の名前、出席状況、最終出席日時を格納
   // console.log("生成された rows:",rows);
-  useEffect(()=>{
-    authApi.users().then(response=>{
-      console.log("取得したレスポンス",response);
-      // console.log("取得したデータ:",response.data);
-      setLabMembers(response);
-    })
-    .catch(error=>{
-      console.error("ユーザー取得失敗",error);
-    });
-  },[]);
+  // useEffect(()=>{
+  //   authApi.users().then(response=>{
+  //     console.log("取得したレスポンス",response);
+  //     // console.log("取得したデータ:",response.data);
+  //     setLabMembers(response);
+  //   })
+  //   .catch(error=>{
+  //     console.error("ユーザー取得失敗",error);
+  //   });
+  // },[]);
+  useEffect(() => {
+    const fetchUsers = () => {
+      authApi.users()
+        .then(response => {
+          console.log("取得したレスポンス", response);
+          setLabMembers(response);
+        })
+        .catch(error => {
+          console.error("ユーザー取得失敗", error);
+        });
+    };
+  
+    fetchUsers(); // 初回取得
+    const interval = setInterval(fetchUsers, 5000); // 5秒ごとに更新
+  
+    return () => clearInterval(interval); // クリーンアップ
+  }, []);
   return (
     <Box>
       <Typography variant="h4">出席状況</Typography>
