@@ -21,6 +21,14 @@
 ![Linux](https://img.shields.io/badge/OS-Linux-yellow?logo=linux)
 ![Raspberry Pi](https://img.shields.io/badge/Hardware-RaspberryPi-C51A4A?logo=raspberry-pi)
 
+## 目次
+
+1. [プロジェクトについて](#プロジェクトについて)
+2. [環境](#環境)
+3. [ディレクトリ構成](#ディレクトリ構成)
+4. [開発環境構築](#開発環境構築)
+5. [トラブルシューティング](#トラブルシューティング)
+
 
 
 
