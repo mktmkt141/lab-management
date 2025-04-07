@@ -4,7 +4,7 @@
 ### フロントエンド
 
 ![React](https://img.shields.io/badge/Frontend_Framework-React-blue?logo=react)
-![TypeScript](https://img.shields.io/badge/Language-TypeScript-blue?logo=typescript)
+![JavaScript](https://img.shields.io/badge/Language-JavaScript-blue?logo=typescript)
 
 ### バックエンド
 
