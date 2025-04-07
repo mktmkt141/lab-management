@@ -24,14 +24,45 @@
 ## 目次
 
 1. [プロジェクトについて](#プロジェクトについて)
-2. [環境](#環境)
+2. [開発環境の構築](#開発環境の構築)
 3. [ディレクトリ構成](#ディレクトリ構成)
-4. [開発環境構築](#開発環境構築)
-5. [トラブルシューティング](#トラブルシューティング)
 
-## プロジェクトについて
+
+
+## 1.プロジェクトについて
 研究室の出席管理を行うためのWebアプリケーションです。
 カードキーをカードリーダーにかざすと、カードの情報を読み取り、画面上に誰が出席しているのかを表示することが出来ます。
+
+## 2.開発環境の構築
+このプロジェクトでは、Dockerを使用して開発環境を統一しています。
+# 開発環境のセットアップ方法
+・Dockerのインストールをします。
+macOSの場合・・Docker Desktop for Macのインストールを行う
+Windowsの場合・・Docker Desktop for Windowsのインストールを行う
+Ubuntu、CentOSの場合・・パッケージのインストール、Dockerのインストールを行う
+・Docker Composeのインストールを行う
+
+# プロジェクトのセットアップ
+・リポジトリのクローンを行う
+git clone https://github.com/mktmkt141/lab-management.git
+・プロジェクトのディレクトリに移動する
+cd lab-management
+・Dockerコンテナをビルドして起動する
+docker compose up --build -d
+・mongodbの初期化方法
+docker exec -it mongodb_container mongosh -u admin -p password --authenticationDatabase admin
+・myappDBにユーザーの作成を行う
+use myappDB
+db.createUser({ user: "admin", pwd: "password",  roles: [{ role: "readWrite", db: "myappDB" }] })
+・最後にbackend_containerの再起動を行う
+docker compose restart backend_container
+
+## 3.ディレクトリ構成
+sudo apt install tree
+tree
+
+
+
 
 
 
