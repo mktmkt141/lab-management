@@ -58,7 +58,10 @@ db.createUser({ user: "admin", pwd: "password",  roles: [{ role: "readWrite", db
 docker compose restart backend_container<br>
 
 ## 3.ディレクトリ構成
-sudo apt install tree<br>
+## treeのインストール
+sudo apt install tree
+
+## tree実行
 tree
 
 
