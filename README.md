@@ -30,35 +30,35 @@
 
 
 ## 1.プロジェクトについて
-研究室の出席管理を行うためのWebアプリケーションです。
+研究室の出席管理を行うためのWebアプリケーションです。<br>
 カードキーをカードリーダーにかざすと、カードの情報を読み取り、画面上に誰が出席しているのかを表示することが出来ます。
 
 ## 2.開発環境の構築
 このプロジェクトでは、Dockerを使用して開発環境を統一しています。
-# 開発環境のセットアップ方法
-・Dockerのインストールをします。
-macOSの場合・・Docker Desktop for Macのインストールを行う
-Windowsの場合・・Docker Desktop for Windowsのインストールを行う
-Ubuntu、CentOSの場合・・パッケージのインストール、Dockerのインストールを行う
-・Docker Composeのインストールを行う
+### 開発環境のセットアップ方法
+・Dockerのインストールをします。<br>
+macOSの場合・・Docker Desktop for Macのインストールを行う<br>
+Windowsの場合・・Docker Desktop for Windowsのインストールを行う<br>
+Ubuntu、CentOSの場合・・パッケージのインストール、Dockerのインストールを行う<br>
+・Docker Composeのインストールを行う<br>
 
-# プロジェクトのセットアップ
-・リポジトリのクローンを行う
-git clone https://github.com/mktmkt141/lab-management.git
-・プロジェクトのディレクトリに移動する
-cd lab-management
-・Dockerコンテナをビルドして起動する
-docker compose up --build -d
-・mongodbの初期化方法
-docker exec -it mongodb_container mongosh -u admin -p password --authenticationDatabase admin
-・myappDBにユーザーの作成を行う
-use myappDB
-db.createUser({ user: "admin", pwd: "password",  roles: [{ role: "readWrite", db: "myappDB" }] })
-・最後にbackend_containerの再起動を行う
-docker compose restart backend_container
+### プロジェクトのセットアップ
+・リポジトリのクローンを行う<br>
+git clone https://github.com/mktmkt141/lab-management.git<br>
+・プロジェクトのディレクトリに移動する<br>
+cd lab-management<br>
+・Dockerコンテナをビルドして起動する<br>
+docker compose up --build -d<br>
+・mongodbの初期化方法<br>
+docker exec -it mongodb_container mongosh -u admin -p password --authenticationDatabase admin<br>
+・myappDBにユーザーの作成を行う<br>
+use myappDB<br>
+db.createUser({ user: "admin", pwd: "password",  roles: [{ role: "readWrite", db: "myappDB" }] })<br>
+・最後にbackend_containerの再起動を行う<br>
+docker compose restart backend_container<br>
 
 ## 3.ディレクトリ構成
-sudo apt install tree
+sudo apt install tree<br>
 tree
 
 
