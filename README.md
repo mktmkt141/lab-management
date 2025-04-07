@@ -44,7 +44,7 @@ Ubuntu、CentOSの場合・・パッケージのインストール、Dockerの�
 
 ### プロジェクトのセットアップ
 ・リポジトリのクローンを行う<br>
-<a href="https://github.com/mktmkt141/lab-management.git" style="text-decoration: none;">git clone https://github.com/mktmkt141/lab-management.git</a><br>
+<a href="https://github.com/mktmkt141/lab-management.git" style="text-decoration: none;"></a><br>
 ・プロジェクトのディレクトリに移動する<br>
 cd lab-management<br>
 ・Dockerコンテナをビルドして起動する<br>
