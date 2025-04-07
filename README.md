@@ -24,8 +24,8 @@
 ## 目次
 
 1. [プロジェクトについて](#プロジェクトについて)
-2. [開発環境の構築](#2-開発環境の構築)
-3. [ディレクトリ構成](#3-ディレクトリ構成)
+2. [開発環境の構築](#開発環境の構築)
+3. [ディレクトリ構成](#ディレクトリ構成)
 
 
 
@@ -44,7 +44,7 @@ Ubuntu、CentOSの場合・・パッケージのインストール、Dockerの�
 
 ### プロジェクトのセットアップ
 ・リポジトリのクローンを行う<br>
-git clone https://github.com/mktmkt141/lab-management.git<br>
+
 ・プロジェクトのディレクトリに移動する<br>
 cd lab-management<br>
 ・Dockerコンテナをビルドして起動する<br>
@@ -58,33 +58,3 @@ db.createUser({ user: "admin", pwd: "password",  roles: [{ role: "readWrite", db
 docker compose restart backend_container<br>
 
 ### ディレクトリ構成
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-docker-compose up -d -buildした後に、mongodbのコンテナに入る。
-
-→　docker exec -it mongodb_container mongosh -u admin -p password --authenticationDatabase admin
-
-次に、myappDBにユーザーを作成する。そして、myappDBデータベースにadminユーザを作成する。
-
-→　use myappDB
-db.createUser({
-  user: "admin",
-  pwd: "password",  // 適切なパスワードを設定
-  roles: [{ role: "readWrite", db: "myappDB" }]
-})
-
-最後にbackend_containerの再起動をする
-
-→　docker-compose restart backend_container
