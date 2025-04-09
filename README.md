@@ -58,4 +58,8 @@ db.createUser({ user: "admin", pwd: "password",  roles: [{ role: "readWrite", db
 docker compose restart backend_container<br>
 
 ### 実際の様子
-![欠席状態の写真](https://github.com/mktmkt141/lab-management/raw/main/before.png)
+カードリーダーにカードをタッチする前は、画面に赤いマークが光っているが、↓<br>
+![欠席状態の写真](https://github.com/mktmkt141/lab-management/raw/main/before.png)<br>
+カードリーダーにカードをかざした後は、画面に緑色のマークが光るようになる。↓<br>
+![欠席状態の写真](https://github.com/mktmkt141/lab-management/raw/main/after.png)
+
