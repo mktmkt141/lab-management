@@ -25,7 +25,7 @@
 
 1. [プロジェクトについて](#プロジェクトについて)
 2. [開発環境の構築](#開発環境の構築)
-3. [ディレクトリ構成](#ディレクトリ構成)
+3. [実際の様子](#実際の様子)
 
 
 
@@ -57,4 +57,5 @@ db.createUser({ user: "admin", pwd: "password",  roles: [{ role: "readWrite", db
 ・最後にbackend_containerの再起動を行う<br>
 docker compose restart backend_container<br>
 
-### ディレクトリ構成
+### 実際の様子
+![欠席状態の写真](https://github.com/mktmkt141/lab-management/raw/main/before.png)
