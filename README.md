@@ -61,5 +61,7 @@ docker compose restart backend_container<br>
 カードリーダーにカードをタッチする前は、画面に赤いマークが光っているが、↓<br>
 ![欠席状態の写真](https://github.com/mktmkt141/lab-management/raw/main/before.png)<br>
 カードリーダーにカードをかざした後は、画面に緑色のマークが光るようになる。↓<br>
-![欠席状態の写真](https://github.com/mktmkt141/lab-management/raw/main/after.png)
+![欠席状態の写真](https://github.com/mktmkt141/lab-management/raw/main/after.png)<br>
+
+ラズパイやカードリーダーの設定や、詳細は[ここ](https://github.com/mktmkt141/raspi_settings)を見てください。
 
