@@ -46,16 +46,16 @@ Ubuntu、CentOSの場合・・パッケージのインストール、Dockerの�
 ・リポジトリのクローンを行う<br>
 
 ・プロジェクトのディレクトリに移動する<br>
-cd lab-management<br>
+`cd lab-management`<br>
 ・Dockerコンテナをビルドして起動する<br>
-docker compose up --build -d<br>
+`docker compose up --build -d`<br>
 ・mongodbの初期化方法<br>
-docker exec -it mongodb_container mongosh -u admin -p password --authenticationDatabase admin<br>
+`docker exec -it mongodb_container mongosh -u admin -p password --authenticationDatabase admin`<br>
 ・myappDBにユーザーの作成を行う<br>
-use myappDB<br>
-db.createUser({ user: "admin", pwd: "password",  roles: [{ role: "readWrite", db: "myappDB" }] })<br>
+`use myappDB`<br>
+`db.createUser({ user: "admin", pwd: "password",  roles: [{ role: "readWrite", db: "myappDB" }] })`<br>
 ・最後にbackend_containerの再起動を行う<br>
-docker compose restart backend_container<br>
+`docker compose restart backend_container`<br>
 
 ### 実際の様子
 カードリーダーにカードをタッチする前は、画面に赤いマークが光っているが、↓<br>
