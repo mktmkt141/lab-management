@@ -24,14 +24,40 @@
 ## 目次
 
 1. [プロジェクトについて](#プロジェクトについて)
-2. [開発環境の構築](#開発環境の構築)
-3. [実際の様子](#実際の様子)
+2. [ディレクトリ構成](#ディレクトリ構成)
+3. [開発環境の構築](#開発環境の構築)
+4. [実際の様子](#実際の様子)
 
 
 
 ## プロジェクトについて
 研究室の出席管理を行うためのWebアプリケーションです。<br>
 カードキーをカードリーダーにかざすと、カードの情報を読み取り、画面上に誰が出席しているのかを表示することが出来ます。
+
+## ディレクトリ構成
+.
+|-- README.md
+|-- after.png
+|-- before.png
+|-- client
+|   |-- Dockerfile
+|   |-- Dockerfile.dev
+|   |-- README.md
+|   |-- node_modules
+|   |-- package-lock.json
+|   |-- package.json
+|   |-- public
+|   `-- src
+|-- docker-compose.yml
+`-- server
+    |-- Dockerfile
+    |-- Dockerfile.dev
+    |-- index.js
+    |-- node_modules
+    |-- package-lock.json
+    |-- package.json
+    `-- src
+
 
 ## 開発環境の構築
 このプロジェクトでは、Dockerを使用して開発環境を統一しています。
