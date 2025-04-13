@@ -35,7 +35,7 @@
 カードキーをカードリーダーにかざすと、カードの情報を読み取り、画面上に誰が出席しているのかを表示することが出来ます。
 
 ## ディレクトリ構成
-.
+```.
 |-- README.md
 |-- after.png
 |-- before.png
@@ -56,7 +56,7 @@
     |-- node_modules
     |-- package-lock.json
     |-- package.json
-    `-- src
+    `-- src```<br>
 
 
 ## 開発環境の構築
