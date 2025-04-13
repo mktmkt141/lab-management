@@ -58,7 +58,7 @@
     |-- package-lock.json
     |-- package.json
     `-- src
-```<br>
+```
 
 
 ## 開発環境の構築
