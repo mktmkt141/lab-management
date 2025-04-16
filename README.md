@@ -87,7 +87,7 @@ Ubuntu、CentOSの場合・・パッケージのインストール、Dockerの�
 
 ### 実際の様子
 新規登録画面の様子が以下になります。↓<br>
-![新規登録の写真](https://github.com/mktmkt141/lab-management/raw/main/account_make.png)<br>
+![新規登録の写真](https://github.com/mktmkt141/lab-management/raw/main/account-make.png)<br>
 ログイン画面の様子が以下になります。↓<br>
 ![ログイン画面の写真](https://github.com/mktmkt141/lab-management/raw/main/login.png)<br>
 カードリーダーにカードをタッチする前は、画面に赤いマークが光っているが、↓<br>
