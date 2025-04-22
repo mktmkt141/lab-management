@@ -126,7 +126,7 @@ Redux における状態とそれをどう更新するかを定義するまと�
 
 **configureStore とは**<br>
 Redux のストアを設定するための関数のこと。<br>
-**store.js について・・Redux ストアを設定するためのコードのこと。アプリケーション全体で状態の管理を行い、Redux を使って状態の取得と更新を行う**
+**store.js について・・Redux ストアを設定するためのコードのこと。アプリケーション全体で状態の管理を行い、Redux を使って状態の取得と更新を行う**<br>
 まず、userSlice.js で定義した userSlice から作成された reducer をインポートする。次に、configureStore のオプションとして渡される reducer でストア内の state を管理する。キーを user にして(ストア内での状態の名前のことで、アプリケーションのユーザー情報を管理するためのもの)、値を userReducer にする。userReducer とは実際に user 状態を管理するためのロジック。(useSlice から作られた reducer)この、configureStore を使って、store を作る。<br>
 
 **userSlice.js と store.js の関係性について**<br>
