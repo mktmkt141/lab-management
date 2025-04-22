@@ -125,7 +125,7 @@ Redux における状態とそれをどう更新するかを定義するまと�
 ### client/src/redux/store.js について
 
 **configureStore とは**<br>
-Redux のストアを設定するための関数のこと。
+Redux のストアを設定するための関数のこと。<br>
 **store.js について・・Redux ストアを設定するためのコードのこと。アプリケーション全体で状態の管理を行い、Redux を使って状態の取得と更新を行う**
 まず、userSlice.js で定義した userSlice から作成された reducer をインポートする。次に、configureStore のオプションとして渡される reducer でストア内の state を管理する。キーを user にして(ストア内での状態の名前のことで、アプリケーションのユーザー情報を管理するためのもの)、値を userReducer にする。userReducer とは実際に user 状態を管理するためのロジック。(useSlice から作られた reducer)この、configureStore を使って、store を作る。<br>
 
@@ -140,7 +140,7 @@ isAuthenticated というキーに非同期関数を値として割り当てる�
 ### client/index.js について
 
 **Redux の store と Provider とは**<br>
-store とは、状態(state)を管理する場所のことで、ログイン情報やユーザー情報などをアプリ全体で管理できるようになる。Provider とは、React アプリ全体で、useSelector や、useDispatch などが store にアクセスできるようになる。
+store とは、状態(state)を管理する場所のことで、ログイン情報やユーザー情報などをアプリ全体で管理できるようになる。Provider とは、React アプリ全体で、useSelector や、useDispatch などが store にアクセスできるようになる。<br>
 **index.js について・・アプリ全体の最初に実行されるファイルのこと**<br>
 Redux ストアを使うために store と Provider をインポートする。次に、App を Provider で囲う。こうすることで、App.js で定義された React コンポーネントを Provider で囲い、App.js で定義されたコンポーネントに Redux のストアを渡せるようになる。
 
