@@ -198,7 +198,7 @@ exports.verifyToken で、認証ミドルウェアの定義を行う。tokenDeco
 
 ### server/handlers/validation.js 　について
 
-**validation.js について・・バリデーションチェックエラーのハンドリング処理を担当するミドルウェア。**
+**validation.js について・・バリデーションチェックエラーのハンドリング処理を担当するミドルウェア**<br>
 このファイルでは、express-validator ライブラリを組み合わせて使われるミドルウェア関数。バリエーションエラーがあれば、レスポンスを返すようになっている。<br>
 
 ### server/src/v1/routes/auth.js 　について
