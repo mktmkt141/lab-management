@@ -63,9 +63,9 @@ const Login = () => {
     <Box component="form" onSubmit={handleSubmit} noValidate>
       <TextField fullWidth id="email" label="メールアドレス" margin='normal'name='email' required helperText={mailadressErrText} error={mailadressErrText!==""}/>
       <TextField fullWidth id="idm" label="icカードの番号" margin='normal'name='idm' required helperText={idmErrText} error={idmErrText!==""}/>
-      <LoadingButton sx={{mt: 3, mb: 2,backgroundColor:"purple",color:"white","&:hover":{backgroundColor:"darkviolet"}}} fullWidth type="submit" loading={loading} variant="outlined">ログイン</LoadingButton>
+      <LoadingButton sx={{mt: 3, mb: 2}} fullWidth type="submit" loading={loading} color='primary'variant="outlined">ログイン</LoadingButton>
     </Box>
-    <Button component={Link} to="/register" >登録していないならこちら</Button>
+    <Button component={Link} to="/register">登録していないならこちら</Button>
     </>
   );
 };
