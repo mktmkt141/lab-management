@@ -164,7 +164,7 @@ react-router-dom から BrouserRouter、Route、Routes をインポートして�
 
 ### client/src/pages/Login.jsx について
 
-**Login.jsx について・・ログイン画面のコンポーネントで、メールアドレスとカード番号を入力してログインする画面の設定を行うためのもの。**
+**Login.jsx について・・ログイン画面のコンポーネントで、メールアドレスとカード番号を入力してログインする画面の設定を行うためのもの。**<br>
 usestate を用いて、各入力フィールドのエラーメッセージを管理する。また、ログインボタンが押されたときにローディングの表示を行うためのもの。<br>
 handlsubmit 関数を定義し、data 部分を取得、その中から email と idm の二種類の要素を trim する。そして API と通信を、authApi.login を用いて行う。成功したら、トークンを localstorage に保存し navigate 関数でトップページに遷移する。
 
