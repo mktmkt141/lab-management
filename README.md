@@ -11,7 +11,7 @@
 ![Express](https://img.shields.io/badge/Backend_Framework-Express-black?logo=express)
 ![Node.js](https://img.shields.io/badge/Language-Node.js-green?logo=node.js)
 
-### ミドルウェア
+### データベース
 
 ![MongoDB](https://img.shields.io/badge/Database-MongoDB-green?logo=mongodb)
 
