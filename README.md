@@ -2,6 +2,7 @@
 ## 使用技術
 
 ### フロントエンド
+![Built with React](https://img.shields.io/badge/Built_with-React-blue?logo=react)
 
 ![React](https://img.shields.io/badge/Frontend_Framework-React-blue?logo=react)
 ![JavaScript](https://img.shields.io/badge/Language-JavaScript-blue?logo=typescript)
