@@ -2,17 +2,14 @@
 ## 使用技術
 
 ### フロントエンド
-![Built with React](https://img.shields.io/badge/Built_with-React-blue?logo=react)
-![UI Library: React](https://img.shields.io/badge/UI_Library-React-blue?logo=react)
 
-
-![React](https://img.shields.io/badge/Frontend_Framework-React-blue?logo=react)
-![JavaScript](https://img.shields.io/badge/Language-JavaScript-blue?logo=typescript)
+![React](https://img.shields.io/badge/UI_Library-React-blue?logo=react)
+![JavaScript](https://img.shields.io/badge/Language-JavaScript-blue?logo=javascript)
 
 ### バックエンド
 
 ![Express](https://img.shields.io/badge/Backend_Framework-Express-black?logo=express)
-![Node.js](https://img.shields.io/badge/Language-Node.js-green?logo=node.js)
+![Node.js](https://img.shields.io/badge/Runtime-Node.js-green?logo=node.js)
 
 ### データベース
 
@@ -23,6 +20,7 @@
 ![Docker](https://img.shields.io/badge/Infrastructure-Docker-blue?logo=docker)
 ![Linux](https://img.shields.io/badge/OS-Linux-yellow?logo=linux)
 ![Raspberry Pi](https://img.shields.io/badge/Hardware-RaspberryPi-C51A4A?logo=raspberry-pi)
+
 
 ## 目次
 
